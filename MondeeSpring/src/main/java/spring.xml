@@ -14,7 +14,9 @@
 </bean>
  <bean id="Banglore" class="com.mondee.Travel" >
  <property name="v">
- <ref bean="audi"/>
+ <ref bean="kaveri"/>
+ 
+ 
  </property>
  </bean>
 </beans>

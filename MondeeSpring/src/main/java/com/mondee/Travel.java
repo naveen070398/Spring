@@ -7,8 +7,12 @@ public class Travel implements Journey{
 		this.v = v;
 	}
 	public void startJourney() {
-		
+		System.out.println("Journey Started!!");
+		v.move();
 		
 	}
 
+	
+	
+	
 }

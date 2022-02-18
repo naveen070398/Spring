@@ -11,8 +11,6 @@ public class MainLogic {
 		
 		Travel travel = (Travel) ac.getBean("Banglore");
 		travel.startJourney();
-		//Travel travel2 = (Travel) ac.getBean("Hyderabad");
-		//travel2.startJourney();
-		//System.out.println(st.getSid()+" "+st.getSname()+" "+st.getSmarks());
+		
 	}
 }
