@@ -7,12 +7,9 @@ public class MainLogic {
 
 	public static void main(String[] args) {
 		ApplicationContext ct=new ClassPathXmlApplicationContext("spring.xml");
-		Springjdbcselect sj=ct.getBean(Springjdbcselect.class);
-		sj.insert();
-		//sj.update();
-		//sj.delete();
-		//sj.selectEx();
-		                                 
+		HdfcBank hb=(HdfcBank)ct.getBean("pfb");
+	    hb.withdraw();
+	    hb.deposit();
 	}
 
 }

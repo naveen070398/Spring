@@ -18,9 +18,9 @@ public class Springjdbcselect {
 	/*public void update() {
 		jt.execute("update student set sname='shiva' where sid=1" );
 	}*/
-	public void delete() {
+	/*public void delete() {
 		jt.execute("delete from student where sid=3" );
-	}
+	}*/
 	public void selectEx()
 	{
 		List li=jt.queryForList("select * from student");

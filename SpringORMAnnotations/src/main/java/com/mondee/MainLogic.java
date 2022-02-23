@@ -7,13 +7,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MainLogic {
 
 	public static void main(String[] args) {
-		ApplicationContext ct=new AnnotationConfigApplicationContext("JdbcAnnot.class");
+		ApplicationContext ct=new  AnnotationConfigApplicationContext(Connection.class);
 		Springjdbcselect sj=ct.getBean(Springjdbcselect.class);
-		//sj.insert();
+		sj.insert();
 		//sj.update();
 		//sj.delete();
 		sj.selectEx();
-		
+		                                 
 	}
 
 }
