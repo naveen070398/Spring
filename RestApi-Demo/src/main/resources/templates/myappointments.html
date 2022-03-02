@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Appointments</title>
+    <style>
+           body    {
+           background-color: lightblue ; 
+           padding-top: 100px;
+           font-weight: bolder ;
+          text-shadow:  3px 3px 5px black;
+           
+            }
+            </style>
+</head>
+<body>
+<center>
+  <a th:href="@{/patient/myprofile/{id}(id=${patient.id})}">Profile</a>
+  <a th:href="@{/patient/{id}/appointment(id=${patient.id})}">Book Appointment</a>
+  <a th:href="@{/patient/{id}/myappointments(id=${patient.id})}">My Appointments</a>
+  <a th:href="@{/}">Logout</a>
+  <table>
+    <thead>
+    <tr>
+    <td>Name</td>
+      <td>Date</td>
+      <td>Department</td>
+      <td>Status</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="appoint: ${appointments}">
+      <td th:text="${appoint.patientName}"></td>
+      <td th:text="${appoint.date}"></td>
+      <td th:text="${appoint.specialist}"></td>
+      <td th:text="${appoint.status}"></td>
+    </tr>
+    </tbody>
+  </table>
+</center>
+</body>
+</html>
